@@ -7,10 +7,10 @@ import Form from "@components/Form";
 const EditPrompt = () => {
   const router = useRouter();
   const [promptId, setPromptId] = useState(null);
-  const searchParams = useSearchParams();
-
+  
   useEffect(() => {
     const getPromptId = async () => {
+      const searchParams = useSearchParams();
       const id = searchParams.get("id");
       setPromptId(id);
     };
